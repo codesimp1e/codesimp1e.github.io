@@ -23,21 +23,20 @@
     var CONFIG = {"hostname":"codesimp1e.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="环境搭建 Tools Used in 6.S081 下面以WSL2 (ubuntu)为例 1sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu">
+  <meta name="description" content="论文简介   论文题目为Differential Evolution for Multimodal Optimization With Species by Nearest-Better Clustering，发表于IEEE Transactions on Cybernetics ( Volume: 51, Issue: 2, February 2021)  多模态优化问题 (Mul">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编译运行xv6（环境搭建）">
-<meta property="og:url" content="http://codesimp1e.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/6-S081/2023/06/19/6-s081-1/index.html">
+<meta property="og:title" content="差分进化多模态优化论文笔记">
+<meta property="og:url" content="http://codesimp1e.github.io/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95/2023/07/04/FBK-DE/index.html">
 <meta property="og:site_name" content="codesimp1e">
-<meta property="og:description" content="环境搭建 Tools Used in 6.S081 下面以WSL2 (ubuntu)为例 1sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu">
+<meta property="og:description" content="论文简介   论文题目为Differential Evolution for Multimodal Optimization With Species by Nearest-Better Clustering，发表于IEEE Transactions on Cybernetics ( Volume: 51, Issue: 2, February 2021)  多模态优化问题 (Mul">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-19T12:35:23.000Z">
-<meta property="article:modified_time" content="2023-06-20T08:11:09.728Z">
+<meta property="article:published_time" content="2023-07-04T03:00:16.000Z">
+<meta property="article:modified_time" content="2023-07-04T14:00:55.740Z">
 <meta property="article:author" content="codesimp1e">
-<meta property="article:tag" content="操作系统">
-<meta property="article:tag" content="6.S081">
+<meta property="article:tag" content="进化算法 差分进化 多模态优化">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://codesimp1e.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/6-S081/2023/06/19/6-s081-1/">
+<link rel="canonical" href="http://codesimp1e.github.io/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95/2023/07/04/FBK-DE/">
 
 
 <script id="page-configurations">
@@ -50,7 +49,7 @@
   };
 </script>
 
-  <title>编译运行xv6（环境搭建） | codesimp1e</title>
+  <title>差分进化多模态优化论文笔记 | codesimp1e</title>
   
 
 
@@ -165,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://codesimp1e.github.io/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/6-S081/2023/06/19/6-s081-1/">
+    <link itemprop="mainEntityOfPage" href="http://codesimp1e.github.io/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95/2023/07/04/FBK-DE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -178,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          编译运行xv6（环境搭建）
+          差分进化多模态优化论文笔记
         </h1>
 
         <div class="post-meta">
@@ -187,27 +186,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-06-19 20:35:23" itemprop="dateCreated datePublished" datetime="2023-06-19T20:35:23+08:00">2023-06-19</time>
+              <time title="创建时间：2023-07-04 11:00:16 / 修改时间：22:00:55" itemprop="dateCreated datePublished" datetime="2023-07-04T11:00:16+08:00">2023-07-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-20 16:11:09" itemprop="dateModified" datetime="2023-06-20T16:11:09+08:00">2023-06-20</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/6-S081/" itemprop="url" rel="index"><span itemprop="name">6.S081</span></a>
+                  <a href="/categories/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">进化算法</span></a>
                 </span>
             </span>
 
@@ -222,20 +211,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="环境搭建">环境搭建</h2>
-<p><a target="_blank" rel="noopener" href="https://pdos.csail.mit.edu/6.828/2020/tools.html">Tools Used
-in 6.S081</a></br> 下面以WSL2 (ubuntu)为例 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu </span><br></pre></td></tr></table></figure> <span id="more"></span>
-如果程序在以下语句后挂起 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-riscv64 -machine virt -bios none -kernel kernel/kernel -m 128M -smp 3 -nographic -drive file=fs.img,<span class="keyword">if</span>=none,format=raw,<span class="built_in">id</span>=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0</span><br></pre></td></tr></table></figure> 需要卸载 qemu-system-misc
-并且安装旧版本 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove qemu-system-misc</span><br><span class="line">sudo apt-get install qemu-system-misc=1:4.2-3ubuntu6</span><br></pre></td></tr></table></figure> *** 如果提示找不到版本，可以尝试编译安装
-(<a
-target="_blank" rel="noopener" href="https://wiki.qemu.org/Hosts/Linux#Building_QEMU_for_Linux">Building
-QEMU for Linux</a>)<br> 安装编译需要的工具 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build</span><br></pre></td></tr></table></figure> 下载源码并解压
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-5.1.0.tar.xz</span><br><span class="line">tar xf qemu-5.1.0.tar.xz</span><br></pre></td></tr></table></figure> 构建QEMU for riscv64-softmmu: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> qemu-5.1.0</span><br><span class="line">./configure --disable-kvm --disable-werror --prefix=/usr/local --target-list=<span class="string">&quot;riscv64-softmmu&quot;</span></span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></p>
-<h2 id="启动xv6">启动Xv6</h2>
-<p>拉取xv6源码并且切换至util分支 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://g.csail.mit.edu/xv6-labs-2020</span><br><span class="line"><span class="built_in">cd</span> xv6-labs-2020</span><br><span class="line">git checkout util</span><br></pre></td></tr></table></figure> 编译并且运行xv6
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make qemu</span><br></pre></td></tr></table></figure> 当出现 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xv6 kernel is booting</span><br><span class="line"></span><br><span class="line">hart 2 starting</span><br><span class="line">hart 1 starting</span><br><span class="line">init: starting sh</span><br></pre></td></tr></table></figure> 说明xv6启动成功。<br>
-在命令行键入<code>ls</code>将会见到如下输出 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span></span><br><span class="line">.              1 1 1024</span><br><span class="line">..             1 1 1024</span><br><span class="line">README         2 2 2059</span><br><span class="line">xargstest.sh   2 3 93</span><br><span class="line"><span class="built_in">cat</span>            2 4 23664</span><br><span class="line"><span class="built_in">echo</span>           2 5 22504</span><br><span class="line">forktest       2 6 13232</span><br><span class="line">grep           2 7 26808</span><br><span class="line">init           2 8 23312</span><br><span class="line"><span class="built_in">kill</span>           2 9 22432</span><br><span class="line"><span class="built_in">ln</span>             2 10 22296</span><br><span class="line"><span class="built_in">ls</span>             2 11 25848</span><br><span class="line"><span class="built_in">mkdir</span>          2 12 22568</span><br><span class="line"><span class="built_in">rm</span>             2 13 22552</span><br><span class="line">sh             2 14 40560</span><br><span class="line">stressfs       2 15 23528</span><br><span class="line">usertests      2 16 142264</span><br><span class="line">grind          2 17 36944</span><br><span class="line"><span class="built_in">wc</span>             2 18 24648</span><br><span class="line">zombie         2 19 21808</span><br><span class="line">console        3 20 0</span><br></pre></td></tr></table></figure>
-键入<code>Ctrl-a x</code>退出xv6</p>
+        <h2 id="论文简介">论文简介</h2>
+<p>  论文题目为<em>Differential Evolution for Multimodal Optimization
+With Species by Nearest-Better Clustering</em>，发表于<strong>IEEE
+Transactions on Cybernetics ( Volume: 51, Issue: 2, February
+2021)</strong></p>
+<hr />
+<h2
+id="多模态优化问题-multimodal-optimization-problem-mmops">多模态优化问题
+(Multimodal optimization problem, MMOPS)</h2>
+<p>  多模态优化问题包含多个全局和局部峰值，解决这些问题旨在寻找到全部最优解，在这篇论文中特指全局最优解。</p>
+<hr />
+<h2 id="nearest-better-clustering">Nearest-Better Clustering</h2>
+<p>  NBC在多模态优化中用于将种群划分为多个物种，同时追踪多个最优解。</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>NBC算法流程</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1、按照适应度从最好到最差对种群排序</td>
+</tr>
+<tr class="even">
+<td>2、计算每对个体的距离</td>
+</tr>
+<tr class="odd">
+<td>3、创建空生成树<em>T</em></td>
+</tr>
+<tr class="even">
+<td>4、对于每个个体创建一条边，连接最近邻居中比自身适应度更好的个体并将该边添加到树<em>T</em>中</td>
+</tr>
+<tr class="odd">
+<td>5、计算树中所有边的平均距离<span
+class="math inline">\(\mu_{dist}\)</span></td>
+</tr>
+<tr class="even">
+<td>6、对于树中每条边如果距离大于 <span
+class="math inline">\(\phi\times\mu_{dist}\)</span>
+则切断该边并记录种子（子树的根节点）</td>
+</tr>
+</tbody>
+</table>
+<p>  至此生成树<em>T</em>被划分为一些子树，每棵子树表示一个物种
+(species)，子树的根节点视为物种的种子 (seed)。</p>
+<p>  NBC与现有的niching方法相比NBC不需要先验知识（例如峰值数量），并且NBC只需要设置一个参数ϕ控制物种的数量。当ϕ较小时，获得的物种更多；而增加ϕ会导致物种减少。一般来说，ϕ被设定为2.0。</p>
+<hr />
+<h2 id="nbc-minsize">NBC-Minsize</h2>
+<p>  当ϕ设置为相对较小的值时，种群可以被划分为更多的物种。因此，不同的物种可以定位更多有前途的区域。在本文中，参数ϕ被设置为1.0。然而，较小的ϕ值会导致过多的分段。此外，只包含少数个体（例如一个或两个个体）的物种数量会大大增加，使物种无法与DE的变异算子进行演化。</p>
+<p>  因此，在本文中，参数<em>minsize</em>用于限制物种中个体的最小数量。需要注意的是，<em>minsize</em>的值必须谨慎处理。如果它太小，最小尺寸限制机制就失去了作用；如果太大，很可能两个位于不同峰顶的物种仍然会连接在一起。</p>
+<p>  为了获得更好的结果，<em>minsize</em>应该在早期取一个较小的值，在中期和后期取相对较大的值。在早期，由于种群没有定位在峰顶，它应该被划分为更多的物种。在中期和后期，由于种群大致（或精确地）定位在多个峰顶，较大的<em>minsize</em>允许定位局部最优解的物种被纳入定位全局最优解的附近物种。因此，物种更快地收敛到全局最优解。</p>
+<p>  在这篇论文中<em>minsize</em>被设置为： <span
+class="math display">\[minsize(g) = 5+g/2\]</span> <span
+class="math inline">\(g\)</span>表示当前代数，<span
+class="math inline">\(minsize\)</span>最开始设置为5以确保差分变异算子能够工作，为了避免<span
+class="math inline">\(minsize\)</span>过大，设置上界如下： <span
+class="math display">\[bound(g) = max(10,3*D)\]</span>
+其中D为问题的维度即解空间的维度。</p>
+<table>
+<thead>
+<tr class="header">
+<th>NBC-Minsize算法流程</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1、设置minsize</td>
+</tr>
+<tr class="even">
+<td>2、构造完整的生成树<em>T</em></td>
+</tr>
+<tr class="odd">
+<td>3、计算平均距离<span class="math inline">\(\mu_{dist}\)</span></td>
+</tr>
+<tr class="even">
+<td>4、计算<em>fellow</em>向量</td>
+</tr>
+<tr class="odd">
+<td>5、对<em>T</em>中边从长到短排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>To be continue...</strong></p>
 
     </div>
 
@@ -245,8 +306,7 @@ QEMU for Linux</a>)<br> 安装编译需要的工具 <figure class="highlight bas
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"># 操作系统</a>
-              <a href="/tags/6-S081/" rel="tag"># 6.S081</a>
+              <a href="/tags/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95-%E5%B7%AE%E5%88%86%E8%BF%9B%E5%8C%96-%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BC%98%E5%8C%96/" rel="tag"># 进化算法 差分进化 多模态优化</a>
           </div>
 
         
@@ -254,11 +314,11 @@ QEMU for Linux</a>)<br> 安装编译需要的工具 <figure class="highlight bas
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95/2023/07/04/FBK-DE/" rel="next" title="差分进化多模态优化论文笔记">
-      差分进化多模态优化论文笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/6-S081/2023/06/19/6-s081-1/" rel="prev" title="编译运行xv6（环境搭建）">
+      <i class="fa fa-chevron-left"></i> 编译运行xv6（环境搭建）
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -317,7 +377,8 @@ QEMU for Linux</a>)<br> 安装编译需要的工具 <figure class="highlight bas
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8xv6"><span class="nav-number">2.</span> <span class="nav-text">启动Xv6</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">论文简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98-multimodal-optimization-problem-mmops"><span class="nav-number">2.</span> <span class="nav-text">多模态优化问题
+(Multimodal optimization problem, MMOPS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nearest-better-clustering"><span class="nav-number">3.</span> <span class="nav-text">Nearest-Better Clustering</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nbc-minsize"><span class="nav-number">4.</span> <span class="nav-text">NBC-Minsize</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -430,6 +491,59 @@ QEMU for Linux</a>)<br> 安装编译需要的工具 <figure class="highlight bas
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
